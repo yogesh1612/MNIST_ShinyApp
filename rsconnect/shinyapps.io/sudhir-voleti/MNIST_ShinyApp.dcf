@@ -1,0 +1,13 @@
+name: MNIST_ShinyApp
+title: MNIST_ShinyApp
+username:
+account: sudhir-voleti
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3429087
+bundleId: 4028241
+url: https://sudhir-voleti.shinyapps.io/MNIST_ShinyApp/
+when: 1608904998.7515
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: mnist_model.h5|temp/mnist_model.h5

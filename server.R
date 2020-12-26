@@ -47,6 +47,9 @@ server <- function(input, output) {
     
   })
   
+  
+  
+  
   output$model_summary <- renderPrint(
     if (is.null(input$file)) {return("Upload Model to print summary")}
     else{return(summary(model()))}

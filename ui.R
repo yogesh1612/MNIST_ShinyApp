@@ -1,6 +1,10 @@
 library(shiny)
 library(keras)
 library(pixels)
+library(reticulate)
+
+
+
 
 options(shiny.maxRequestSize=50*1024^2) 
 ui <- fluidPage(
@@ -9,7 +13,7 @@ ui <- fluidPage(
   sidebarPanel(
     
   
-    fileInput("file", "Upload Trained Model"),
+    fileInput("file", "Upload Trained Model")
     
    # submitButton(text = "Upload Model", icon("upload"))
   ),
@@ -30,6 +34,7 @@ ui <- fluidPage(
                          p("Model Summary:"),
                          verbatimTextOutput('model_summary'),
                          br()),
+                tabPanel("Model Development",includeMarkdown('model_training.md')),
                 tabPanel("Data Input and Prediction",
                          h4(p("Draw single digit number")),
                          tags$style(HTML("
@@ -46,7 +51,7 @@ ui <- fluidPage(
                          br(),
                         # p("Below is the predicted number"),
                          textOutput('predicted_number'))
-                #tabPanel("Model Development",includeHTML('model_training.html'))
+                 
                         
                          
     )
